@@ -1,0 +1,75 @@
+<%# debugger %>
+$('#comment_form').remove();
+// $('#cp_<%= @post.id %>').append("<%= j render partial: 'comments/comment', :locals => { :comment => @comment }  %>");
+$('#cp_<%= @post.id %>').append("<%= j render partial: 'comments/comment', :locals => { :comment => @comment, :post => @post }  %>");
+
+// $('#cp_<%= @post.id %>').append("<%= j render partial:  @comment  %>");
+$('#comment_c<%= @post.id %>').text('<% count = @post.comments.count %> <%= count > 0 ? count : " " %>');
+
+
+
+
+
+
+
+
+
+
+
+
+
+// $('#comment_form').remove();
+// $('#cp_<%= @post.id %>').append("<%= escape_javascript(render(partial: 'comment' , comment: @comment))%>")
+// $('#comments').append("<%= j render partial: @comment , locals: {comment: @comment }%>")
+
+
+// witout partial
+// $('#comment_form').remove();
+// ele = document.createElement("div");
+// ele.className= "remove";
+// <%# debugger %>
+// ele.innerHTML = "<strong>Comment:</strong> <%= @comment.comment %>";
+// $('.uploader').find(' #comment_show<%= @post.id %>').append(ele)
+
+// $('#comment_<%= @post.id %>').text('<% count = @post.comments.count %><%= count > 0 ? count : ""  %>')
+
+
+
+
+
+
+
+
+
+ // $("#comments").html("<%= escape_javascript(render partial: 'comments/comment', collection: @post.comments, as: :comment) %>");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// $("#comments").prepend("<%= j render partial: 'comment',locals: {comment: @comment} %>");
+
+// $("#comments").prepend("<%= j render partial: 'comment' %>")
+

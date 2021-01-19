@@ -1,0 +1,88 @@
+<h1>Welcome</h1>
+
+
+
+<%= link_to 'new post',new_post_path, remote: true%>
+
+<div class="new"></div>
+
+ <table id="posts" class="table1">
+ 	
+ 	<tr>
+ 		<th>Title</th>
+ 		<th>Body</th>
+ 		<th>Event</th>
+ 		<th>Count</th>
+ 	</tr>
+ 		<%= render @posts %>
+ </table>
+
+
+
+
+
+
+
+
+
+<!-- <div id="posts">
+
+	<div class="title">
+		<strong>Title</strong>
+		<strong>Body</strong>
+		<strong>event</strong>
+	</div>
+	<%#= render @posts %>	
+</div>
+ -->
+
+ <!-- without partial -->
+<!-- <div class="index_post", id="index_<%= @posts %>">
+	<%# debugger %>
+	<div>
+			<strong>Title</strong>
+			<strong>body</strong>
+			
+	</div> -->
+	<!-- <div class="uploader">
+		<%# @posts.each do |post| %>
+			<div class="test"  id= "post_<%#= post.id %>">
+				<%#= post.title %>
+				<%#= post.body %>
+				<%#= link_to 'comment', new_comment_path(post_id: post.id), remote: true %>	
+			</div>
+			<div>
+				<%# post.comments.each do |comment| %>
+					<div class="c">
+						<strong>Comment:</strong>
+						<%#= comment.comment %>
+					</div>
+				<%# end %>
+				<%# debugger %>
+					<div class="comment_count" id="comment_<%#= post.id %>">
+						<%# count = post.comments.count %>
+						<%#= count > 0 ? count : ""  %>	
+					</div>
+					commentform 
+				<div class="comment" id="comment-<%#= post.id %>"></div> 
+				show somment
+				<div class="comment_show" id="comment_show<%#= post.id %>"></div>
+			</div>
+		<%# end %>
+			<div class="empty"></div>
+	</div> -->
+<!-- </div> -->
+<!-- <div class="posts">
+	
+</div> -->
+<!-- <ul id="posts">
+
+	<div class="title">
+		<strong>Title</strong>
+		<strong>Body</strong>
+		<strong>event</strong>
+	</div>
+	<%#= render @posts %>
+	
+	
+</ul> -->

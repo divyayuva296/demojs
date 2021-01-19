@@ -1,0 +1,38 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div><%#= comment.comment %></div> -->
+<%# if @post %>
+	<tr >
+		<td>
+			<% if @comment %>
+				<%= @comment.comment %>
+			<% else %>
+				<%= comment.comment %>
+			<% end %>
+		</td>
+	</tr>
+
+<%# end %>
+
+	
+	<%# debugger %>

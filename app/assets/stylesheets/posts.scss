@@ -1,0 +1,18 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.table1 ,.table1 th,.table1 td {
+	border: 1px solid orange;
+	width: 50%;
+}
+.table1 th{
+	background-color: orange;
+}
+.table1 td{
+	text-align: center;
+}
+
+.table2, .table2 th, .table2 td{
+	border: 1px solid green;
+	width: 300px;
+}

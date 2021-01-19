@@ -1,0 +1,130 @@
+
+
+$(document).ready(function(){
+
+
+
+ const button = document.getElementById('comment_link<%= @post.id %>');
+	button.addEventListener('click',function(e){
+		e.preventDefault();
+		$('.table2').hide();
+		if(button.innerText == "comment"){
+
+			$('#cp_<%= @post.id %>').show();
+			button.innerText = "Hide";
+			$('#comment-<%= @post.id %>').html("<%= j render :partial => 'comments/form', :locals => { :comment => @comment } %>");
+		}
+		else if(button.innerText.toLowerCase() == 'hide') {
+			button.innerText = "Comment";
+			$('#cp_<%= @post.id %>').hide();
+		}
+		else {
+			button.innerText = "comment";
+			$('#comment_form').hide();
+			$('.table1').show();
+		}
+		
+	});
+});
+
+
+// $(function(){
+//  const button = document.getElementById('comment_link<%= @post.id %>');
+
+// 	button.addEventListener('click',function(){
+
+// 		if(button.innerText == "comment"){
+		
+// 			button.innerText = "hide";
+// 			$('.table2').show();
+// 			$('#comment-<%= @post.id %>').html("<%= j render :partial => 'comments/form', :locals => { :comment => @comment } %>");
+// 		}
+// 		else
+// 		{
+// 			button.innerText = "comment";
+// 			$('.table2').hide(); 
+// 			$('.c td').hide();
+// 			$('#comment-<%= @post.id %>').hide();
+// 		}
+// 		// else if(button.innerText == 'hide') {
+// 		// 	button.innerText = "Comment";
+// 		// 	$('.table2').hide();
+// 		// }
+// 		// else {
+// 		// 	$('.table1').show();
+// 		// 	button.innerText = "comment";
+// 		// 	$('#comment_form').hide();
+// 		// }
+		
+// 	});
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let button = document.getElementById('comment_link');
+
+// button.addEventListener('click', function() {
+//   if(button.innerText.toLowerCase() == 'comment') {
+
+//     button.innerText = 'Hide';
+//     	debugger
+//   }
+//   else {
+//     button.innerText = 'Comment';
+//   }
+// });
+// $(document).ready(function() {
+//     $("#comment_link").click(function(){
+//     	// $('.table2').hide();
+//     	$('.table2').slideToggle("fast");
+
+//     	$('#comment.link')
+//         debugger
+//     }); 
+// });
+
+
+// $(document).ready(function() {
+//     $("#comment_link").click(function(){
+//     	// $('.table2').hide();
+//     	$('.table2').slideToggle("fast");
+
+//     	$('#comment.link')
+//         debugger
+//     }); 
+// });
+
+
+
+// $('#comment-<%= @post.id %>').html("<%= j render :partial => 'comments/form', :locals => { :comment => @comment } %>");
+// $('#comment_link').html("hide");
+// $('.comment').html("<%= j render partial: 'comments/form' %>")
+ 
+
+//  $("button.btn-tag-cat").click(function(e) {
+//   e.preventDefault();
+//   var id = $(this).attr('id');
+//   alert(id);
+//   $('#' + id).find('span').show();
+// });
+// <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+// <button class="btn-tag-cat" id="hallo">Press</button>

@@ -1,0 +1,13 @@
+
+<%= form_with model: [@comment], remote: true, id: 'comment_form' do |form| %>
+	<p>
+		<%= form.label :comment %>
+		<%= form.text_field :comment %>
+	</p>
+	<p>
+		<%= form.hidden_field :post_id ,value: @post.id %>
+	</p>
+	<p>
+		<%= form.submit %>
+	</p>
+<% end %>

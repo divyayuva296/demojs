@@ -1,0 +1,67 @@
+// with partial
+$('#form').remove();
+$('#posts').append("<%= j render partial:  @post  %>");
+
+
+
+<%# debugger %>
+ // without partial
+// var node = document.querySelector('.uploader');
+// $('#form').hide();
+// ele = document.createElement("div");
+// ele.className= "remove";
+// // debugger
+// ele.innerHTML = "<%= @post.title %> <%= @post.body %> <a data-remote=\"true\" href=\"/comments/new?post_id=<%= @post.id %>\">comment</a> ";
+// $('.uploader').find('.empty').append(ele)
+// node.insertBefore(ele,node.nextSibling);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ // $("#post_<%= @post_last.id %>").append(newDiv.innerHTML);
+// $(".posts").append('<div class="index_post"></div>')
+
+// $("#post_<%= @post_last.id %>").append('<div class="body divya"  id= "post_<%= @post.id %>"> <%= @post.title %> <%= @post.body %> </div>');
+
+// $('#form').remove();
+// debugger
+// $('.body').prepend();
+// debugger
+// $('#posts').prepand()
+// $('#posts').prepend("<%= j render partial:  @post  %>");
+// $("<%= escape_javascript(render @post) %>").insertAfter('.title');
+// $('.index_new').show();
+// $("<%= escape_javascript(render @post) %>").prepend("#posts");
+// prepend(

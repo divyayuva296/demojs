@@ -1,0 +1,35 @@
+	
+<tr>
+	<td><%= post.title %></td>
+
+	<td><%= post.body %></td>
+		<!-- <td class></td> -->
+	
+	<td class="c">
+		<%= link_to 'comment', new_comment_path(post_id: post.id),remote: true , id: "comment_link#{post.id}"%>
+			<table id="cp_<%= post.id %>" class="table2">
+				<tr>
+					<th>Comment</th>
+				</tr>
+				<div class="collection">
+					<% post.comments.each do |comment| %>
+						<%= render :partial => "comments/comment", :locals => { :comment => comment , :post => post} %>
+					<% end %>	</div>	
+			</table>
+		</td>
+
+		<td>
+			<div id="comment_c<%= post.id %>">
+						<% count = post.comments.count %>
+						<%= count > 0 ? count : " " %>	
+					</div>	
+		</td>
+		<td><div class="comment" id="comment-<%= post.id %>"></div></td>
+</tr>
+			
+		<!-- <tr><td id="posts"></td></tr> -->
+			
+		
+	
+
+			
