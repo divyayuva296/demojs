@@ -6,16 +6,24 @@
 		<!-- <td class></td> -->
 	
 	<td class="c">
-		<%= link_to 'comment', new_comment_path(post_id: post.id),remote: true , id: "comment_link#{post.id}"%>
-			<table id="cp_<%= post.id %>" class="table2">
+		
+		  <button id= "show<%= post.id %>" class = "hello" value = "comment"><%= link_to 'comment', comments_path(post_id: post.id),remote: true,method: :post, id: "co", class: "com"%></button>
+		 <button id= "hide<%= post.id %>" value = "hide" style = "display: none;"><%= link_to 'hide', new_comment_path(post_id: post.id),remote: true, id: "co", class: "com"%></button>
+		
+		<%#= button_to 'comment', new_comment_path(post_id: post.id), remote: true, class: post.id %>
+		
+			<table id="cp_<%= post.id %>" class="table2"> 
 				<tr>
 					<th>Comment</th>
-				</tr>
+				</tr> 
 				<div class="collection">
+					<div class="comment" id="comment-<%= post.id %>">
+						
+					</div>
 					<% post.comments.each do |comment| %>
-						<%= render :partial => "comments/comment", :locals => { :comment => comment , :post => post} %>
+						<%= render :partial => "comments/comment", :locals => { :comment => comment , :post => post.id} %>
 					<% end %>	</div>	
-			</table>
+			</table> 
 		</td>
 
 		<td>
@@ -24,12 +32,44 @@
 						<%= count > 0 ? count : " " %>	
 					</div>	
 		</td>
-		<td><div class="comment" id="comment-<%= post.id %>"></div></td>
+		<!-- <td><div class="comment" id="comment-<%= post.id %>"></div></td> -->
 </tr>
 			
 		<!-- <tr><td id="posts"></td></tr> -->
 			
-		
+<script>
+	$(document).ready(function(){
+		$('#show<%= post.id %>').on("click", function(){
+			if(this.innerText == "comment"){
+				debugger
+				$("#comment-<%= post.id %>").html("<%= j render partial: 'comments/form' %>" )
+				// this.innerText = "hide"
+				// debugger
+			}
+		})
+
+	})
+	
+// document.getElementById("co").onclick = function() {myFunction()};
+
+// function myFunction() {
+//   button = document.getElementById("co")
+
+//   if (button.innerText == "comment"){
+//   	button.innerText = "hide";
+//   	$('#comment_form').show();
+//   }
+//   else
+//   {
+//   	button.innerText = "comment";
+//   	$('.table2').hide();
+//   	$('.comment').hide();
+//   }
+// }
+        //validation code to see State field is mandatory.  
+    
+	
+</script>		
 	
 
 			

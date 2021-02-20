@@ -4,4 +4,7 @@ Rails.application.routes.draw do
 
   resources :posts
   resources :comments
+  
+  get '/sub_category', to: "posts#sub_category"
+
 end

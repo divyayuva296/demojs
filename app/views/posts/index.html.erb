@@ -1,3 +1,4 @@
+
 <h1>Welcome</h1>
 
 
@@ -17,8 +18,34 @@
  		<%= render @posts %>
  </table>
 
+<div>
+	<h1>Check box</h1>
+	<%= form_tag '/posts' do%>
+		<%Category.all.each do |category|%>
+			<%= label_tag "#{category.name}" %>
+			
+			<%= check_box_tag 'category[]', "#{category.name}", false,{ class: "category_#{category.id}",id: "cat"} %><br>
+			 <ul> <% category.sub_categories.each do |sub_category| %>
+					<%= label_tag "#{sub_category.name}" %>
+					<%= check_box_tag 'sub_category[]', "#{sub_category.name}", false, { class: "sub_category",data: {id: category.id}} %><br>
+			<% end %></ul>
+		<% end %>
+		<%= submit_tag 'save' %>
+	<% end %>
+</div>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+<script type="text/javascript">
+	 $(document).on("change", ".sub_category", function(){
+    var id = $(this).data("id");
 
-
+    if ($('.sub_category').is(':checked')){
+    	$(".category_"+id).prop('checked', true);
+    }
+    else{
+    	$(".category_"+id).prop('checked', false);
+    }
+  })	
+</script>
 
 
 

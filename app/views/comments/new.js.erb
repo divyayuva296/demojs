@@ -1,31 +1,242 @@
 
+// show = document.getElementById('show<%= @post.id %>');
+// hide = document.getElementById('hide<%= @post.id %>');
 
-$(document).ready(function(){
+// if (show.innerText == "comment" && show.value == "comment"){
+
+// 	show.value = "hide";
+// 	show.style.display = "none";
+// 	$('#comment-<%= @post.id %>').html("<%= j render :partial => 'comments/form', :locals => { :comment => @comment } %>");	 	 
+// 	document.getElementById('hide<%= @post.id %>').style = "block";
+// }
+// else{
+
+// 	show.value = "comment";
+// 	$('#comment-<%= @post.id %>').hide();
+// 	$('#cp_<%= @post.id %>').hide();
+// 	hide.style.display = "none";
+
+// 	document.getElementById('show<%= @post.id %>').style= "block";	
+// }
 
 
 
- const button = document.getElementById('comment_link<%= @post.id %>');
-	button.addEventListener('click',function(e){
-		e.preventDefault();
-		$('.table2').hide();
-		if(button.innerText == "comment"){
 
-			$('#cp_<%= @post.id %>').show();
-			button.innerText = "Hide";
-			$('#comment-<%= @post.id %>').html("<%= j render :partial => 'comments/form', :locals => { :comment => @comment } %>");
-		}
-		else if(button.innerText.toLowerCase() == 'hide') {
-			button.innerText = "Comment";
-			$('#cp_<%= @post.id %>').hide();
-		}
-		else {
-			button.innerText = "comment";
-			$('#comment_form').hide();
-			$('.table1').show();
-		}
+
+
+
+
+
+
+
+
+
+
+
+
+// if (hide.innerText == "hide"){
+// 	debugger
+// }
+
+// document.getElementById('show<%= @post.id %>').onclick = myFunction;
+// function myFunction(){
+// 	alert("hello");
+// }
+// button = document.getElementById('show<%= @post.id %>');
+// $('#comment-<%= @post.id %>').html("<%= j render :partial => 'comments/form', :locals => { :comment => @comment } %>");	 	 
+
+// if (button.innerText == 'comment'){
+// 	button.style.display = "none";
+// 	// debugger
+// 	 document.getElementById('hide<%= @post.id %>').style = "block";
+
+// }
+// else{
+// 	debugger
+// 	 $('#comment-<%= @post.id %>').hide();
+// }
+
+
+// document.getElementById('show<%= @post.id %>').addEventListener("click", function() {
+//   alert("Hello World!");
+// });
+
+// document.getElementById('show<%= @post.id %>').addEventListener("click", myFunction);
+
+// function myFunction() {
+// 	debugger
+//   document.getElementById("demo").innerHTML = Date();
+// }
+
+
+
+// var button = document.querySelector('#c<%= @post.id %>');
+
+
+	
+// $('#c<%= @post.id %>').click(function(){
+	
+// 	if (button.innerText == 'comment')
+// 	{
+
+// 		$('#c<%= @post.id %>[href]')
+// 		// button.firstChild.text = "hide"
+// 		document.getElementById('c<%= @post.id %>').innerText = "hide"
+// 		debugger
+// 		button.innerText = "hide";
+// 		// $('#comment-<%= @post.id %>').show();
+// 		$('#comment-<%= @post.id %>').html("<%= j render :partial => 'comments/form', :locals => { :comment => @comment } %>");	 	 
+// 		// $('.table2').show();
+// 	}
+// 	else 
+// 	{
+// 		// button.firstChild.text = "comment"
+// 		document.getElementById('#c<%= @post.id %>').innerText = "comment";	
+// 		$('#comment-<%= @post.id %>').hide();
+// 		$('.table2').hide();
 		
-	});
-});
+// 	}
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// document.getElementById('comment').onclick = function() {change()}
+// function change(){
+// 	document.querySelector('#comment').value = 'Hide';
+// 		// $('#comment-<%= @post.id %>').html("<%= j render :partial => 'comments/form', :locals => { :comment => @comment } %>");
+// 		// $('#comment-<%= @post.id %>').click(function(){
+// 		// 	debugger
+// 		// })
+// }
+// "comment_link#{post.id}"
+// debugger
+// $('comment_link#{@post.id}').click(function(e){
+// debugger
+// 	// e.preventDefault();
+// 	$("#comment_form").show();
+
+// });
+// $(document).ready(function(){
+
+
+
+//  const button = document.getElementById('comment_link<%= @post.id %>');
+// 	button.addEventListener('click',function(e){
+// 		e.preventDefault();
+// 		$('.table2').hide();
+// 		if(button.innerText == "comment"){
+
+// 			$('#cp_<%= @post.id %>').show();
+// 			button.innerText = "Hide";
+// 			$('#comment-<%= @post.id %>').html("<%= j render :partial => 'comments/form', :locals => { :comment => @comment } %>");
+// 		}
+// 		else if(button.innerText.toLowerCase() == 'hide') {
+// 			button.innerText = "Comment";
+// 			$('#cp_<%= @post.id %>').hide();
+// 		}
+// 		else {
+// 			button.innerText = "comment";
+// 			$('#comment_form').hide();
+// 			$('.table1').show();
+// 		}
+		
+// 	});
+// });
 
 
 // $(function(){

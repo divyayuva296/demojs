@@ -52,6 +52,10 @@ class PostsController < ApplicationController
 		end
 	end
 
+	def sub_category
+		debugger
+	end
+
 	private
 	def post_params
 		params.require(:post).permit(:title,:body)
